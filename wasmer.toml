@@ -1,0 +1,16 @@
+[package]
+name = "wasmer-probe"
+version = "0.1.0"
+description = "Minimal WASIX probe for Wasmer Edge: HTTP ok, WebSocket echo, outbound TCP dial"
+
+[[module]]
+name = "wasmer-probe"
+source = "wasmer-probe.wasm"
+
+[[command]]
+runner = "wasi"
+name = "wasmer-probe"
+module = "wasmer-probe"
+
+[command.annotations.wasi]
+env = ["PORT=80"]

@@ -1,0 +1,13 @@
+[package]
+name = "wasmer-probe"
+version = "0.1.0"
+edition = "2021"
+description = "Minimal WASIX probe for Wasmer Edge: HTTP ok, WebSocket echo, outbound TCP dial"
+license = "MIT"
+
+[dependencies]
+sha1 = "0.10"
+base64 = "0.22"
+
+[profile.release]
+opt-level = "s"
